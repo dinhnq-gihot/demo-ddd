@@ -1,0 +1,34 @@
+[package]
+name = "demo-ddd"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# async
+tokio = { version = "1.42.0", features = ["full"] }
+
+# logging
+tracing = { version = "0.1.41", features = ["log"] }
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+tracing-appender = "0.2.3"
+
+# serialize
+serde = { version = "1.0.216", features = ["derive"] }
+serde_json = { version = "1.0.133" }
+
+# web-services
+axum = { version = "0.8.1", features = ["multipart"] }
+jsonwebtoken = "9.3.0"
+tower = "0.5.2"
+tower-http = { version = "0.6.2", features = ["full"] }
+
+# db
+diesel = { version = "2.2.6", features = [
+    "extras",
+] } # no backend features need to be enabled
+diesel-async = { version = "0.5.2", features = ["postgres", "bb8"] }
+diesel_async_migrations = "0.15.0"
+
+#utils
+async-trait = "0.1.85"
+anyhow = "1.0.95"
