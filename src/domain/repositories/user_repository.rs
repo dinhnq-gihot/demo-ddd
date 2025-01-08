@@ -1,6 +1,8 @@
-use crate::domain::entities::user::User;
-use anyhow::Result;
-use async_trait::async_trait;
+use {
+    crate::domain::entities::user::User,
+    anyhow::Result,
+    async_trait::async_trait,
+};
 
 #[async_trait]
 pub trait UserRepository {

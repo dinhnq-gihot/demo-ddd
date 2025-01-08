@@ -1,5 +1,6 @@
 use crate::domain::{
-    entities::user::User, repositories::user_repository::UserRepository,
+    entities::user::User,
+    repositories::user_repository::UserRepository,
     services::user_service::UserService,
 };
 

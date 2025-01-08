@@ -1,5 +1,10 @@
-use crate::domain::{entities::user::User, repositories::user_repository::UserRepository};
-use anyhow::Result;
+use {
+    crate::domain::{
+        entities::user::User,
+        repositories::user_repository::UserRepository,
+    },
+    anyhow::Result,
+};
 
 #[derive(Clone)]
 pub struct UserService<T: UserRepository> {

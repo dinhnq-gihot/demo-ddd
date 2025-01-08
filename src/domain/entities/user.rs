@@ -1,5 +1,7 @@
-use diesel::prelude::*;
-use serde::Serialize;
+use {
+    diesel::prelude::*,
+    serde::Serialize,
+};
 
 #[derive(Debug, Clone, Serialize, Identifiable, AsChangeset, Selectable, Queryable)]
 #[diesel(table_name = crate::schema::users)]

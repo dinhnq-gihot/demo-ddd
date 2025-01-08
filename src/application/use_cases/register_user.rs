@@ -1,8 +1,11 @@
-use crate::domain::{
-    entities::user::User, repositories::user_repository::UserRepository,
-    services::user_service::UserService,
+use {
+    crate::domain::{
+        entities::user::User,
+        repositories::user_repository::UserRepository,
+        services::user_service::UserService,
+    },
+    anyhow::Result,
 };
-use anyhow::Result;
 
 pub struct RegisterUserUserCase<T: UserRepository> {
     user_service: UserService<T>,
